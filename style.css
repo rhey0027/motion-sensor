@@ -1,0 +1,230 @@
+/* GLOBAL SETTINGS */
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-size: cover;
+}
+button {
+  display: block;
+  margin: auto;
+  width: 160px;
+  margin-bottom: 10px;
+  padding: 8px 30px;
+  border: none;
+  font-weight: bold;
+  background-color: #0beb43;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+} 
+button:hover {
+  /* background-color: aqua; */
+  background-color: rgb(23, 54, 231);
+  transition: 0.3s ease-in-out;
+  color: #fff;
+}
+.mainContainer {
+  /* background-color: #111111; */
+  height: 100vh;
+  /* background-image: url("/assets/image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.title {
+  text-align: center;
+  padding-top: 20px;
+}
+.title h2 {
+  /* color: #09adee; */
+  color: greenyellow;
+  text-transform: uppercase;
+  font-family: 'OCR-A BT Regular', sans-serif;
+  font-size: 28px;
+}
+.title p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 2px;
+  font-weight: bold;
+  color: #fff;
+}
+.counterElementView {
+  width: 200px;
+  margin-bottom: 20px;
+}
+.counterElementView p {
+  /* color: #09adee; */
+  color: yellow;
+  font-family: 'OCR-A BT Regular', sans-serif;
+  /* font-weight: bold; */
+  text-align: center;
+  font-size: 80px;
+  margin-top: 10px;
+}
+.btn-container {
+  display: block;
+  height: 150px;
+  padding-top: 10px;
+}
+#decrease-btn:disabled {
+  color: #fff;
+  background: none;
+}
+#total-btn:disabled {
+  border: 1px solid greenyellow;
+  color: #fff;
+  background: none;
+}
+.record-container {
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  font-size: small;
+  color: #fff;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.interval-container {
+  height: 75px;
+  /* width: 100%; */
+  width: 160px;
+}
+.interval-container h5 {
+  background: #f3f03d;
+  color: #0000ff;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+.interval-container p {
+  height: 100%;
+  padding-top: 10px;
+  overflow-y: auto;
+}
+.total-captured-container {
+  height: 75px;
+  width: 100%;
+  padding-top: 5px;
+}
+.total-captured-container h5 {
+  background: #f3f03d;
+  color: #0000ff;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+.total-captured-container p {
+  height: 100%;
+  color: #f3f03d;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: 'OCR-A BT Regular', sans-serif;
+  padding-top: 10px;
+}
+#reset-btn {
+  border: none;
+  width: 150px;
+  padding: 5px 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  /* background-color: #ec8a0a; */
+  background-color:#f52121;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+#reset-btn:hover {
+  background-color: #ff0000;
+}
+.footer-motionSensor {
+  background-color: #025206;
+  height: 25px;
+  position: absolute;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.footer-motionSensor p {
+  color: #91989e;
+  font-size: 10px;
+  letter-spacing: 1px;
+  align-items: center;
+  display: flex;
+}
+.footer-motionSensor span {
+  color: yellow;
+}
+
+/* RESPONSIVE */
+
+/** 
+  for screen lower than 768px  
+*/
+@media only screen and (max-width: 768px) {
+  .headerWrapper {
+    background-image: url("/assets/image1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    padding-top: 10px;
+  }
+  .header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .btn-reset {
+    margin-top: 30px;
+  }
+  .header-para {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .record {
+    padding-top: 20px;
+  }
+  .record h4 {
+    padding-top: 20px;
+  }
+  .interval-container p {
+    overflow-y: auto;
+  }
+}
+/** 
+  for screen larger than 768px
+*/
+@media only screen and (min-width: 768px) {
+  .headerWrapper {
+    background-image: url("/assets/image1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .footer-motionSensor {
+    margin: auto;  
+  }
+  .title {
+    padding: 0;
+  }
+  .interval-container p {
+    overflow-y: auto;
+  }
+}
+
+
+
+
+
+
