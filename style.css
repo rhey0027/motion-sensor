@@ -1,4 +1,6 @@
-/* GLOBAL SETTINGS */
+/* --------------------------- *\
+  #GLOBAL SETTINGS
+\* ----------------------------*/
 * {
   margin: 0; 
   padding: 0;
@@ -6,7 +8,12 @@
   overflow: hidden;
   font-family: 'Arial', sans-serif;
   background-size: cover;
+  background-image: url("/assets/image1.jpg");
+  background-repeat: no-repeat;
 }
+/* --------------------------- *\
+  #BUTTONS
+\* ----------------------------*/
 button {
   display: block;
   margin: auto;
@@ -20,19 +27,31 @@ button {
   border-radius: 5px;
   cursor: pointer;
   border: none;
+}
+.btn-container {
+  display: block;
+  height: 150px;
+  padding-top: 10px;
+}
+#decrease-btn:disabled {
+  color: #fff;
+  background: none;
+}
+#total-btn:disabled {
+  border: 1px solid greenyellow;
+  color: #fff;
+  background: none;
 } 
 button:hover {
-  /* background-color: aqua; */
   background-color: rgb(23, 54, 231);
   transition: 0.3s ease-in-out;
   color: #fff;
 }
+/* --------------------------- *\
+  #MAIN CONTAINER
+\* ----------------------------*/
 .mainContainer {
-  /* background-color: #111111; */
   height: 100vh;
-  /* background-image: url("/assets/image1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 .headerWrapper {
   display: flex;
@@ -45,7 +64,6 @@ button:hover {
   padding-top: 20px;
 }
 .title h2 {
-  /* color: #09adee; */
   color: greenyellow;
   text-transform: uppercase;
   font-family: 'OCR-A BT Regular', sans-serif;
@@ -63,28 +81,15 @@ button:hover {
   margin-bottom: 20px;
 }
 .counterElementView p {
-  /* color: #09adee; */
   color: yellow;
   font-family: 'OCR-A BT Regular', sans-serif;
-  /* font-weight: bold; */
   text-align: center;
   font-size: 80px;
   margin-top: 10px;
 }
-.btn-container {
-  display: block;
-  height: 150px;
-  padding-top: 10px;
-}
-#decrease-btn:disabled {
-  color: #fff;
-  background: none;
-}
-#total-btn:disabled {
-  border: 1px solid greenyellow;
-  color: #fff;
-  background: none;
-}
+/* --------------------------- *\
+  #RECORD SECTION
+\* ----------------------------*/
 .record-container {
   text-align: center;
   height: 150px;
@@ -97,7 +102,6 @@ button:hover {
 }
 .interval-container {
   height: 75px;
-  /* width: 100%; */
   width: 160px;
 }
 .interval-container h5 {
@@ -130,13 +134,15 @@ button:hover {
   font-family: 'OCR-A BT Regular', sans-serif;
   padding-top: 10px;
 }
+/* --------------------------- *\
+  #RESET BUTTON
+\* ----------------------------*/
 #reset-btn {
   border: none;
   width: 150px;
   padding: 5px 30px;
   margin-top: 10px;
   border-radius: 5px;
-  /* background-color: #ec8a0a; */
   background-color:#f52121;
   color: #fff;
   font-weight: bold;
@@ -146,6 +152,9 @@ button:hover {
 #reset-btn:hover {
   background-color: #ff0000;
 }
+/* --------------------------- *\
+  #FOOTER SECTION
+\* ----------------------------*/
 .footer-motionSensor {
   background-color: #025206;
   height: 25px;
@@ -166,17 +175,11 @@ button:hover {
 .footer-motionSensor span {
   color: yellow;
 }
-
-/* RESPONSIVE */
-
-/** 
-  for screen lower than 768px  
-*/
+/* --------------------------- *\
+  #RESPONSIVE
+\* ----------------------------*/ 
 @media only screen and (max-width: 768px) {
   .headerWrapper {
-    background-image: url("/assets/image1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     margin: auto;
     padding-top: 10px;
   }
@@ -206,9 +209,6 @@ button:hover {
 */
 @media only screen and (min-width: 768px) {
   .headerWrapper {
-    background-image: url("/assets/image1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     margin: auto;
     padding-top: 50px;
   }

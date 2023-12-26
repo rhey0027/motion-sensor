@@ -1,10 +1,14 @@
-// ----function starts here
+/* ---------------------- *\
+  #FUNCTIONS STARTS HERE
+  #creating variables
+\* ---------------------- */
 let countEl = 0
 let recordsEl = []
 const hypen = ' - '  
 const disabled = false
-
-//getting id
+/* ---------------------- *\
+  #GETTING ELEMENT ID
+\* ---------------------- */
 const c_element = document.getElementById('countEl')
 const increaseEl = document.getElementById('increase-btn')  
 const decreaseEl = document.getElementById('decrease-btn')
@@ -12,8 +16,9 @@ const totalEl = document.getElementById('total-btn')
 const saveEl = document.getElementById('record-el')
 const outputEl = document.getElementById('output-el')
 const resetEl = document.getElementById('reset-btn')
-
-//rendering data from localStorage
+/* ------------------------------ *\
+  #TO ITERATE DATA IN ARRAY LIST
+\* ------------------------------- */
 const renderEntry = (recordsEl) => {
   let listData = ''
   for(let i = 0; i < recordsEl.length; i++ ) {
@@ -22,17 +27,13 @@ const renderEntry = (recordsEl) => {
     const totalSum = records.filter((record) => record > 0)
     .reduce((acc, cur) => acc + cur, 0)
     outputEl.textContent = totalSum
-    // console.log(totalSum)
   }
   saveEl.innerHTML = listData
 }
-
-// fetch record in localStorage
 const getRecords = JSON.parse(localStorage.getItem('recordsEl'))
 if(getRecords) {
   recordsEl = getRecords
 }
-// button increase function
 increaseEl.addEventListener('mouseover', function() {
   if(countEl >= 0) {
     document.getElementById('decrease-btn').disabled = false
@@ -43,8 +44,6 @@ increaseEl.addEventListener('mouseover', function() {
   countEl += 1
   c_element.textContent = countEl
 })
-
-// button decrease function
 decreaseEl.addEventListener('click', function() {
   if(countEl === 0) {
     document.getElementById('decrease-btn').disabled = true
@@ -55,14 +54,10 @@ decreaseEl.addEventListener('click', function() {
     c_element.textContent = countEl
   }
 })
-
-// onLoad
 window.onload = () => {
   document.getElementById('total-btn').disabled = true
   totalEl.textContent = 'DISABLED'
 }
-
-//save data
 totalEl.addEventListener('click', function() {
   window.onload()
   let saveRecord = countEl + '-'
@@ -73,7 +68,6 @@ totalEl.addEventListener('click', function() {
   c_element.textContent = 0
   countEl = 0
 }) 
-//reset data
 resetEl.addEventListener('click', function() {
   localStorage.clear()
   location.reload()
