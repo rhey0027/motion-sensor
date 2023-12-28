@@ -7,9 +7,7 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
-  background-size: cover;
-  background-image: url("/assets/image1.jpg");
-  background-repeat: no-repeat;
+  
 }
 /* --------------------------- *\
   #BUTTONS
@@ -58,6 +56,9 @@ button:hover {
   align-items: center;
   flex-direction: column;
   height: 100%;
+  background-size: cover;
+  background-image: url("./assets/image1.jpg");
+  background-repeat: no-repeat;
 }
 .title {
   text-align: center;
@@ -174,6 +175,7 @@ button:hover {
 }
 .footer-motionSensor span {
   color: yellow;
+  opacity: 50%;
 }
 /* --------------------------- *\
   #RESPONSIVE

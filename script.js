@@ -6,6 +6,7 @@ let countEl = 0
 let recordsEl = []
 const hypen = ' - '  
 const disabled = false
+
 /* ---------------------- *\
   #GETTING ELEMENT ID
 \* ---------------------- */
@@ -33,8 +34,10 @@ const renderEntry = (recordsEl) => {
 const getRecords = JSON.parse(localStorage.getItem('recordsEl'))
 if(getRecords) {
   recordsEl = getRecords
+  renderEntry(recordsEl)
+  console.log(outputEl)
 }
-increaseEl.addEventListener('mouseover', function() {
+increaseEl.addEventListener('click', function() {
   if(countEl >= 0) {
     document.getElementById('decrease-btn').disabled = false
     document.getElementById('total-btn').disabled = false
